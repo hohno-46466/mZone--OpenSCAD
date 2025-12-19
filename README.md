@@ -29,3 +29,8 @@ My 3D objects created by OpenSCAD
      
      8 directories, 16 files (Thu Dec 18 07:58:07 JST 2025)
 
+Note: URL = https://github.com/hohno-46466/mZone--OpenSCAD
+
+Note: URL = git@github.com:hohno-46466/mZone--OpenSCAD.git
+
+-EOF-
