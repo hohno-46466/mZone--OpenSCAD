@@ -1,12 +1,13 @@
 //
-// Raspberry Pi ４B
+// Raspberry Pi ４B with AK-RS-02/07
 //
-// RaspberryPi4B-2-20251123C.scad
+// RaspberryPi4B-2-20260103G.scad (AKRS02/07-2-20260103G)
 //
 // https://www.raspberrypi.com/documentation/computers/raspberry-pi.html
 //
 // First version: 2025-11-23(Sun) 07:24 JST / 2025-11-22(Sat) 22:24 UTC
-// Last update: 2025-12-17(Wed) 14:27 JST / 2025-12-17(Wed) 05:27 UTC   // text = "AK-RS-02/07_2__";
+// Prev update: 2025-12-17(Wed) 14:27 JST / 2025-12-17(Wed) 05:27 UTC   // text = "AK-RS-02/07_2__";
+// Last update: 2026-01-04(Sun) 02:27 JST / 2026-01-03(Sat) 17:27 UTC   // text = "AKRS02/07-2-20260103G";
 //
 
 Px = 85.0; Py = -56.0; Pz = 3.0;    // パネルの 横・縦・厚さ （P は "Panel" の P）
@@ -14,7 +15,7 @@ Cd = 4.2;  Cz = 6.0;                // 円柱の直径、厚さ （Cは "Cylinde
 H1d = 2.8; H2d = 2.8;               // 穴1（円柱）, 穴2(DIN) の直径 （H は "Hole" の H）
 
 tdepth = 2.0;                       // 文字を掘る深さ（mm）
-text = "AK-RS-02/07_2__";
+text = "AKRS02/07-2-20260103G";
 
 // 穴1の位置リスト
 hole1_pos = [
@@ -58,9 +59,10 @@ difference() {
     }
 
     // (4) テキストを掘る 
-    translate([Px/2, Py/2, (Pz-tdepth)])
+    translate([Px*0.5, Py*0.5, Pz-tdepth])
         // 文字の高さを tdepth + 1.0 に指定しているので、 プレート表面より 1.0 だけ飛び出す
+        // #rotate([0, 180, 0])
         linear_extrude(height = tdepth + 1.0)
-            text(text, size = 5, halign = "center", valign = "center");
+            text(text, size = 4, halign = "center", valign = "center");
             // center = true を指定していないので、 XY平面上に z=0 を基準に造形 ← これあってる？
 }

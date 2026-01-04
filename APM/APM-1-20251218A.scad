@@ -1,7 +1,7 @@
 //
 // APM #01 (Analog Panel Meter No.1)
 //
-// APM-1-20251217A.scad
+// APM-1-20251218A.scad
 //
 // First version 2025-12-17(Wed) 20:41 JST / 2025-12-17(Wed) 11:41 UTC  // text="APM-1-20251218A-x__";
 // Last update:  2025-12-18(Thu) 13:17 JST / 2025-12-18(Thu) 04:17 UTC
@@ -67,10 +67,10 @@ difference() {
     translate([Px/2 - 3.5, Py/2, (Pz - tdepth)])
         linear_extrude(height = tdepth + 1.0)
             rotate([0, 0, 90])
-                text(text1, size = 5, halign = "center", valign = "center");
+                text(text1, size = 4, halign = "center", valign = "center");
     translate([Px/2 + 3.5, Py/2, (Pz - tdepth)])
         linear_extrude(height = tdepth + 1.0)
             rotate([0, 0, 90])
-                text(text2, size = 5, halign = "center", valign = "center");
+                text(text2, size = 4, halign = "center", valign = "center");
 }
 

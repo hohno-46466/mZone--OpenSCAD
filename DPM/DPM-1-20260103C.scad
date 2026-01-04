@@ -1,20 +1,20 @@
 //
 // DPM #01 (Digital Pane Meter No.1)
 //
-// DPM-1-20250522A.scad
+// DPM-1-20260103C.scad
 //
 // Prev update: 2025-05-22(Thu) 02:00 JST / 2025-05-21(Wed) 17:00 UTC
 // Prev update: 2025-05-22(Thu) 23:15 JST / 2025-05-22(Thu) 14:15 UTC
 // Prev update: 2025-05-25(Sun) 08:08 JST / 2025-05-24(Sat) 23:08 UTC
 // Prev update: 2025-12-18(Thu) 05:17 JST / 2025-12-17(Wed) 20:17 UTC    // text="DPM-1-20250522A-x__";
-// Last update: 2026-01-03(Sat) 07:33 JST / 2026-01-02(Fri) 22:33 UTC    // text="DPM-1-20260103A"; text size: 4
+// Last update: 2026-01-03(Sat) 07:33 JST / 2026-01-02(Fri) 22:33 UTC    // text="DPM-1-20260103C"; text size: 4
 
 Px = 150.0; Py = 60.0; Pz = 3.0;    // パネルの 横・縦・厚さ （P は "Panel" の P）
 Hd = 3.2;   Hp = 10.0;              // ネジ穴の直径、位置 （H は "Hole" の H）
 Sx = 46.0;  Sy = 26.0;              // 角穴の横・縦 (S は "Square" の S)
 
 tdepth = 2.0;                       // 文字を掘る深さ（mm）
-text = "DPM-1-20260103A";
+text = "DPM-1-20260103C";
 
 // ネジ穴の位置リスト
 hole1_pos = [
@@ -52,8 +52,8 @@ difference() {
     }
     
     // （4） テキストを掘る
-    translate([Px/2, Py*0.1, (Pz-tdepth)])
+    translate([Px/2, Py*0.15, (Pz-tdepth)])
         // 文字の高さを tdepth + 1.0 に指定しているので、 プレート表面より 1.0 だけ飛び出す
         linear_extrude(height = tdepth + 1.0)
-            text(text, size = 5, halign = "center", valign = "center");
+            text(text, size = 4, halign = "center", valign = "center");
 }
