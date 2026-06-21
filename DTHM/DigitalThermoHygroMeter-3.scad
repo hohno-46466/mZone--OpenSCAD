@@ -3,11 +3,12 @@
 // DigitalThermoHygroMeter-3.scad
 
 // Prev update: 2025-11-25(Tue) 07:26 JST / 2025-11-24(Mon) 22:26 UTC
-// Prev update: 2025-12-02(Tue) 19:29 JST / 2025-12-02(Tue) 10:29 UTC (311) // tilt_angle=45
+// Prev update: 2025-12-02(Tue) 19:29 JST / 2025-12-02(Tue) 10:29 UTC (311) // tilt_angle=45 z3=40?
 // Prev update: 2025-12-02(Tue) 20:20 JST / 2025-12-02(Tue) 11:20 UTC (331) // tilt_angle=30
 // Prev update: 2025-12-02(Tue) 20:27 JST / 2025-12-02(Tue) 11:27 UTC (351) // tilt_angle=15
-// Last update: 2025-12-09(Tue) 21:35 JST / 2025-12-09(Tue) 12:35 UTC (371) // tilt_angle=0; z3=120
-// Last update: 2025-12-18(Thu) 05:52 JST / 2025-12-17(Wed) 20:52 UTC
+// Prev update: 2025-12-09(Tue) 21:35 JST / 2025-12-09(Tue) 12:35 UTC (371) // tilt_angle=0; z3=120
+// Prev update: 2025-12-18(Thu) 05:52 JST / 2025-12-17(Wed) 20:52 UTC
+// Last update: 2026-03-27(Fri) 06:40 JST / 2026-03-26(Thu) 21:40 UTC
 
 $fn = 100;
 
@@ -23,11 +24,30 @@ z2 = z1;    // 穴の高さ
 // ブロック1の大きさ
 x3 = z1;    // ブロック1 の幅
 y3 = y1;    // ブロック1 の奥行き
-z3 = 120.0; // ブロック1 の高さ
+z3 = 40.0;  // z3 = 120.0; // ブロック1 の高さ
 
 tdepth = 2.0;       // 文字を掘る深さ（mm）
-tilt_angle = 0;     // side_block1 を内側へ傾ける角度（度）
-text = "371-_";     // Type=3, Version=7(tilt_angle=0), Release=1 // 刻印が 377 になっている造形物もある
+
+// -----------------------------------------------------------------------------
+
+// 311
+// tilt_angle = 45;     // side_block1 を内側へ傾ける角度（度）
+// text = "311-_";      // Type=3, Version=1(tilt_angle=45), Release=1
+
+// 331
+tilt_angle = 30;    // side_block1 を内側へ傾ける角度（度）
+text = "331-_";     // Type=3, Version=3(tilt_angle=30), Release=1
+
+// 351
+// tilt_angle = 15;     // side_block1 を内側へ傾ける角度（度）
+// text = "351-_";      // Type=3, Version=5(tilt_angle=15), Release=1
+
+// 371
+// tilt_angle = 0;      // side_block1 を内側へ傾ける角度（度）
+// text = "371-_";      // Type=3, Version=7(tilt_angle=0), Release=1 // 刻印が 377 になっている造形物もある
+// z3 = 120.0;          // ブロック1 の高さを上書き
+
+// -----------------------------------------------------------------------------
 
 // 穴あき板
 module plate_with_hole() {

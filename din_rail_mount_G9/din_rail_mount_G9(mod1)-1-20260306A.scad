@@ -2,16 +2,16 @@
 // din_rail_mount_G9(mod1)-1-20260306A.scad
 //
 // First version: 2026-03-06(Fri) JST / 2026-03-06(Fri) UTC
-// Last update: 2026-03-08(Sun) 05:52 JST / 2026-03-07(Sat) 20:52 UTC
+// Prev update: 2026-03-08(Sun) 05:52 JST / 2026-03-07(Sat) 20:52 UTC
+// Last update: 2026-03-21(Sat) 18:57 JST / 2026-03-21(Sat) 09:57 UTC
 //
-
 
 $fn = 96;
 
 // For Windows
 // STL_File = "C:/Users/hohno/Dropbox/work-in-progress/3D-modeling/OpenSCAD/SCAD/INCLUDE/din_rail_mount_G9.STL";
 // For Mac
-STL_File = "/Users/hohno/work-in-progress/3D-modeling/OpenSCAD/SCAD/INCLUDE/din_rail_mount_G9.STL";
+STL_File = "/Users/hohno/Dropbox/work-in-progress/3D-modeling/OpenSCAD/SCAD/INCLUDE/din_rail_mount_G9.STL";
 
 Center_X = 5.8; //5.7;
 Center_Z = 6.3;
@@ -33,11 +33,11 @@ difference() {
 
     #translate([(Center_X)+Offset_New, 2, Center_Z])
     rotate([90, 0, 0])
-    cylinder(h = 12, d = 3.2, center = false);
+    cylinder(h = 12, d = 2.8, center = false);
 
     #translate([(Center_X)-Offset_New, 2, Center_Z])
     rotate([90, 0, 0])
-    cylinder(h = 12, d = 3.2, center = false);
+    cylinder(h = 12, d = 3.0, center = false);
 }
 
 // #translate([Center_X, 5, Center_Z])
